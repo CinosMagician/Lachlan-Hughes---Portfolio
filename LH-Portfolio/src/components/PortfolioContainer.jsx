@@ -6,6 +6,7 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 import Footer from '../footer';
+import ContactForm from './ContactForm';
 import './PortfolioContainer.css';
 import '../footer.css';
 
@@ -33,7 +34,10 @@ export default function PortfolioContainer() {
   return (
     <div>
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      <main className="mx-3">{renderPage()}</main>
+      <main className="mx-3">
+        {renderPage()}
+        {currentPage === 'Contact' && <ContactForm />}
+      </main>
       <Footer handlePageChange={handlePageChange} />
     </div>
   );
