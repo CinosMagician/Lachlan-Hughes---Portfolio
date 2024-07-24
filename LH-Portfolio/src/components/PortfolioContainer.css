@@ -3,5 +3,49 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-  
+}
+
+.p-3 {
+    padding: 2rem !important;
+}
+
+.bg-purp {
+    background-color: #46043e;
+}
+
+/* .background {
+    color: aqua;
+    background-color: transparent;
+  } */
+
+.about {
+    margin-top: 5rem;
+    color: aqua;
+    max-width: 20rem;
+    align-items: center;
+    text-shadow: 2px 2px purple;
+}
+
+.portfolio {
+    color: lime;
+    text-shadow: 2px 2px darkGreen;
+}
+
+.contact {
+    color: orangered;
+    text-shadow: 2px 2px crimson;
+}
+
+.resume,
+.resumeForm {
+    color: #E14DFF;
+    text-shadow: 2px 2px purple;
+}
+
+@media (max-width: 768px) {
+    .resume,
+    .resumeForm {
+        color: white;
+        text-shadow: 2px 2px black;
+    }
+}

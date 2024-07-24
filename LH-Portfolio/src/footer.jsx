@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = ({ handlePageChange }) => {
   return (
-    <footer className="footer">
+    <footer className="footer bg-purp">
         <div className='footer-buttons'>
             <a href='https://github.com/CinosMagician' className='footer-button'>
                 <img src='src/assets/GitHub.svg' alt='GitHub Button'/>

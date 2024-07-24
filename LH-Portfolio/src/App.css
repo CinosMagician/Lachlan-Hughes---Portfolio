@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,31 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+html, body, :root {
+  height: 100%;
+  background-color: #302746;
+  /* background-image: url('../src/assets/blueexpback.png'); */
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Varela Round", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* header {
+  flex-shrink: 0;
+}
+
+
+
+footer {
+  flex-shrink: 0;
+} */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
 }

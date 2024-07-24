@@ -59,7 +59,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 contact">
       <h2>Contact Form:</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
@@ -99,7 +99,7 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button type="submit" className="btn btn-primary">Send</button>
+        <button type="submit" className="btn btn-danger">Send</button>
       </form>
     </div>
   );

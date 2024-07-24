@@ -1,11 +1,10 @@
 .footer {
-    background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem;
     width: 100%;
     bottom: 0;
-    position: absolute;
+    position: relative;
   }
   
   .footer-buttons {
