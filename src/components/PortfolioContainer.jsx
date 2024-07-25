@@ -8,6 +8,10 @@ import ContactForm from './ContactForm';
 import Header from '../header';
 import './PortfolioContainer.css';
 import '../footer.css';
+import '../assets/profilepic.png';
+import '../assets/GitHub.svg';
+import '../assets/lin.svg';
+import '../assets/Email.svg';
 
 import aboutBackground from '../assets/blueexpback.png';
 import portfolioBackground from '../assets/greenback.png';
