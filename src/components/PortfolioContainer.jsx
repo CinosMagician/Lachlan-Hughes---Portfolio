@@ -8,10 +8,14 @@ import ContactForm from './ContactForm';
 import Header from '../header';
 import './PortfolioContainer.css';
 import '../footer.css';
-import '../assets/profilepic.png';
-import '../assets/GitHub.svg';
-import '../assets/lin.svg';
-import '../assets/Email.svg';
+
+
+// Unsure if imports are needed here as they have been imported in their own specific areas. Leaving here for now in case needed
+// import profilePic from '../assets/profilepic.png';
+// import githubIcon from '../assets/GitHub.svg';
+// import linkedinIcon from '../assets/lin.svg';
+// import emailIcon from '../assets/Email.svg';
+
 
 import aboutBackground from '../assets/blueexpback.png';
 import portfolioBackground from '../assets/greenback.png';
