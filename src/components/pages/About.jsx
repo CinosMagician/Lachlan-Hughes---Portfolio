@@ -1,8 +1,10 @@
+import profilePic from '../../assets/profilepic.png';
+
 export default function About() {
   return (
     <div className="about">
       <h1 className="text-center">About Me</h1>
-      <img className="profileImage" src="../src/assets/profilepic.png" alt="Profile Image"></img>
+      <img className="profileImage" src={profilePic} alt="Profile Image"></img>
       <p>
         My name is Lachlan, a 26 year old male who is currently
         studying to become a software engineer. I am currently undertaking
