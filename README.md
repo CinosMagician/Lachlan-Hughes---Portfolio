@@ -15,6 +15,8 @@ Clicking on the buttons in the NavBar will take you to each section of the Portf
     
 ## Live Page
 
+https://main--lachlan-hughes-portfolio.netlify.app/
+
 ## Questions
 
 If you wish to see any of my other works,
