@@ -19,11 +19,14 @@
   } */
 
 .about {
-    margin-top: 5rem;
+    margin-top: 1rem;
     color: aqua;
     max-width: 20rem;
     align-items: center;
     text-shadow: 2px 2px purple;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolioText {
@@ -120,3 +123,31 @@
       width: calc(100% - 20px);
     }
   }
+
+  /* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply fade-in and fade-out classes */
+.fade-in {
+  animation: fadeIn 1.5s forwards;
+}
+
+/* Start classes out hidden for fade effect */
+.hidden {
+  opacity: 0;
+}
+
+.profileImage {
+  width: 15rem;
+  height: 15rem;
+  border: solid;
+  border-radius: 2rem;
+  margin: 1rem;
+}

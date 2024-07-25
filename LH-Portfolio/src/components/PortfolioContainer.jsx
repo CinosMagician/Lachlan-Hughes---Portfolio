@@ -17,6 +17,7 @@ import resumeBackground from '../assets/purpback.png';
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('About');
   const [backgroundImage, setBackgroundImage] = useState(aboutBackground);
+  const [fadeClass, setFadeClass] = useState('hidden');
 
   useEffect(() => {
     // Update background image based on the current page
@@ -36,6 +37,14 @@ export default function PortfolioContainer() {
       default:
         setBackgroundImage(aboutBackground);
     }
+
+    setFadeClass('hidden');
+
+    const timeout = setTimeout(() => {
+      setFadeClass('fade-in');
+    }, 10);
+
+    return () => clearTimeout(timeout);
   }, [currentPage]);
 
   const renderPage = () => {
@@ -64,7 +73,7 @@ export default function PortfolioContainer() {
         flexDirection: 'column'
       }}>
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-      <main className="mx-3">
+      <main className={`mx-3 ${fadeClass}`}>
         {renderPage()}
         {currentPage === 'Contact' && <ContactForm />}
       </main>
