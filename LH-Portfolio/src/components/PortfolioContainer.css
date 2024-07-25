@@ -111,6 +111,8 @@
   .project-overlay img {
     width: 3rem;
     height: 3rem;
+    justify-content: center;
+    top: 20px;
   }
   
   @media (max-width: 670px) {

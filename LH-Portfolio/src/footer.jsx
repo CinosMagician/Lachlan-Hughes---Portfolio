@@ -10,8 +10,8 @@ const Footer = ({ handlePageChange }) => {
             <button onClick={() => handlePageChange('Contact')} className="footer-button">
                 <img src="src/assets/Email.svg" alt="Email Button" />
             </button>
-            <a href='https://www.google.com/' className='footer-button'>
-                <img src='src/assets/QMark.svg' alt='3 Button'/>
+            <a href='https://au.linkedin.com/' className='footer-button'>
+                <img src='src/assets/lin.svg' alt='Linkedin Button'/>
             </a>
         </div>
       <p>&copy; 2024 CinosMagician.</p>

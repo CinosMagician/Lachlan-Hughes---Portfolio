@@ -93,7 +93,7 @@ const ContactForm = () => {
             id="message"
             name="message"
             className="form-control"
-            rows="5" // Make the message box bigger
+            rows="5"
             value={formData.message}
             onChange={handleChange}
             required

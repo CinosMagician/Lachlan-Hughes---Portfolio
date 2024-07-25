@@ -1,41 +1,41 @@
 import React from "react";
-import projectImage1 from "../../assets/project1.png";
-import projectImage2 from "../../assets/project2.png";
-import projectImage3 from "../../assets/project3.png";
-import projectImage4 from "../../assets/project4.png";
+import projectImage1 from "../../assets/reciplace logo 750 x 750.png";
+import projectImage2 from "../../assets/weather.png";
+import projectImage3 from "../../assets/readme.png";
+import projectImage4 from "../../assets/blogspace.png";
 import githubIcon from "../../assets/GitHub.svg";
 
 
-// NOTE: This page is full of placeholders, Will update the images, the titles and links once ready.
+// NOTE: BlogSpace is currently not working due to the 30 day trial of Render expiring.
 export default function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: "Project One",
+      title: "Group Project - ReciPlace",
       image: projectImage1,
-      projectLink: "https://example.com/project-one",
-      githubLink: "https://github.com/username/project-one",
+      projectLink: "https://cinosmagician.github.io/group-2-recipe-project/",
+      githubLink: "https://github.com/CinosMagician/group-2-recipe-project",
     },
     {
       id: 2,
-      title: "Project Two",
+      title: "Weather Dashboard",
       image: projectImage2,
-      projectLink: "https://example.com/project-two",
-      githubLink: "https://github.com/username/project-two",
+      projectLink: "https://cinosmagician.github.io/weather-dashboard/",
+      githubLink: "https://github.com/CinosMagician/weather-dashboard",
     },
     {
       id: 3,
-      title: "Project Three",
+      title: "README.md Generator",
       image: projectImage3,
-      projectLink: "https://example.com/project-three",
-      githubLink: "https://github.com/username/project-three",
+      projectLink: "https://github.com/CinosMagician/README-generator",
+      githubLink: "https://github.com/CinosMagician/README-generator",
     },
     {
       id: 4,
-      title: "Project Four",
+      title: "BlogSpace",
       image: projectImage4,
-      projectLink: "https://example.com/project-four",
-      githubLink: "https://github.com/username/project-four",
+      projectLink: "https://github.com/CinosMagician/BlogSpace",
+      githubLink: "https://github.com/CinosMagician/BlogSpace",
     },
   ];
 
