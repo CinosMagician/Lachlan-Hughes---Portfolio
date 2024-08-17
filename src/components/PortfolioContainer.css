@@ -129,8 +129,16 @@
     justify-content: center;
     top: 20px;
   }
+
+  @media (max-width: 768px) {
+    .about-box, .resume {
+      background-image: none; /* Remove background image on small screens */
+      background-color: #000; /* Optional: Set a solid color background */
+    }
+  }
   
   @media (max-width: 670px) {
+
     .project-box {
       width: calc(100% - 20px);
     }
