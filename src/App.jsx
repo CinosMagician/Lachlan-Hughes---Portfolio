@@ -7,8 +7,6 @@ import Header from './header';
 const App = () => (
   <div>
     <Header />
-    <PortfolioContainer />
-    {/* This will render the child routes */}
     <Outlet />
     <Footer />
   </div>

@@ -3,6 +3,9 @@ import projectImage1 from "../../assets/reciplace logo 750 x 750.png";
 import projectImage2 from "../../assets/DJ-topview.jpg";
 import projectImage3 from "../../assets/readme.png";
 import projectImage4 from "../../assets/blogspace.png";
+import projectImage5 from "../../assets/weather.png"
+import projectImage6 from "../../assets/coding.jpg"
+import projectImage7 from "../../assets/tunnel.png"
 import githubIcon from "../../assets/GitHub.svg";
 
 export default function Portfolio() {
@@ -23,10 +26,10 @@ export default function Portfolio() {
     },
     {
       id: 3,
-      title: "README.md Generator",
-      image: projectImage3,
-      projectLink: "https://github.com/CinosMagician/README-generator",
-      githubLink: "https://github.com/CinosMagician/README-generator",
+      title: "PWA Text Editor",
+      image: projectImage7,
+      projectLink: "https://codexium-pwa-text-editor.onrender.com/",
+      githubLink: "https://github.com/CinosMagician/Codexium-PWA-Text-Editor",
     },
     {
       id: 4,
@@ -35,6 +38,27 @@ export default function Portfolio() {
       projectLink: "https://blog-db-rofh.onrender.com/",
       githubLink: "https://github.com/CinosMagician/BlogSpace",
     },
+    {
+      id: 5,
+      title: "Weather Dashboard",
+      image: projectImage5,
+      projectLink: "https://cinosmagician.github.io/weather-dashboard/",
+      githubLink: "https://github.com/CinosMagician/weather-dashboard?tab=readme-ov-file",
+    },
+    {
+      id: 6,
+      title: "Taskboard",
+      image: projectImage6,
+      projectLink: "https://cinosmagician.github.io/taskboard/",
+      githubLink: "https://github.com/CinosMagician/taskboard",
+    },
+    {
+      id: 7,
+      title: "README.md Generator",
+      image: projectImage3,
+      projectLink: "https://github.com/CinosMagician/README-generator",
+      githubLink: "https://github.com/CinosMagician/README-generator",
+    }
   ];
 
   return (
