@@ -5,7 +5,6 @@ export default function About() {
   return (
     <div className="about-box">
       <div className='about'>
-        <h2>Lachlan Hughes</h2>
         <img className="profileImage" alt="Profile Image"></img>
         <h1 className="text-center">About Me</h1>
         <p>
