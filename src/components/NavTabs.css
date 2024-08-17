@@ -1,0 +1,17 @@
+.nav-link, .nav-link.active, .nav-pills {
+  background-color: transparent;
+}
+
+.nav-link {
+  color: #ddd; /* Default color for nav links */
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #fff; /* Color on hover */
+}
+
+.nav-link.active {
+  color: #fff; /* Color for the active link */
+  font-weight: bold; /* Optional: Make the active link bold */
+}

@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
@@ -9,83 +10,20 @@ import Header from '../header';
 import './PortfolioContainer.css';
 import '../footer.css';
 
-
-// Unsure if imports are needed here as they have been imported in their own specific areas. Leaving here for now in case needed
-// import profilePic from '../assets/profilepic.png';
-// import githubIcon from '../assets/GitHub.svg';
-// import linkedinIcon from '../assets/lin.svg';
-// import emailIcon from '../assets/Email.svg';
-
-
-import aboutBackground from '../assets/blueexpback.png';
-import portfolioBackground from '../assets/greenback.png';
-import contactBackground from '../assets/redback.png';
-import resumeBackground from '../assets/purpback.png';
-
 export default function PortfolioContainer() {
-  const [currentPage, setCurrentPage] = useState('About');
-  const [backgroundImage, setBackgroundImage] = useState(aboutBackground);
-  const [fadeClass, setFadeClass] = useState('hidden');
+  const location = useLocation(); // Get the current location
+  const [currentPage, setCurrentPage] = useState(location.pathname.substring(1));
+
 
   useEffect(() => {
-    // Update background image based on the current page
-    switch (currentPage) {
-      case 'About':
-        setBackgroundImage(aboutBackground);
-        break;
-      case 'Portfolio':
-        setBackgroundImage(portfolioBackground);
-        break;
-      case 'Contact':
-        setBackgroundImage(contactBackground);
-        break;
-      case 'Resume':
-        setBackgroundImage(resumeBackground);
-        break;
-      default:
-        setBackgroundImage(aboutBackground);
-    }
-
-    setFadeClass('hidden');
-
-    const timeout = setTimeout(() => {
-      setFadeClass('fade-in');
-    }, 10);
-
-    return () => clearTimeout(timeout);
+    // Update localStorage when currentPage changes
+    localStorage.setItem('currentPage', currentPage);
   }, [currentPage]);
 
-  const renderPage = () => {
-    if (currentPage === 'About') {
-      return <About />;
-    }
-    if (currentPage === 'Portfolio') {
-      return <Portfolio />;
-    }
-    if (currentPage === 'Contact') {
-      return <Contact />;
-    }
-    return <Resume />;
-  };
-
-  const handlePageChange = (page) => setCurrentPage(page);
-
   return (
-      <div id="root" style={{ 
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'auto',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column'
-      }}>
-      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-      <main className={`mx-3 ${fadeClass}`}>
-        {renderPage()}
-        {currentPage === 'Contact' && <ContactForm />}
+    <div id="root" style={{}}>
+      <main className={`mx-3`}>
       </main>
-      <Footer handlePageChange={handlePageChange} />
     </div>
   );
 }

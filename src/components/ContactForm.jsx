@@ -99,7 +99,7 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button type="submit" className="btn btn-danger">Send</button>
+        <button type="submit" className="btn btn-danger mb-5">Send</button>
       </form>
     </div>
   );

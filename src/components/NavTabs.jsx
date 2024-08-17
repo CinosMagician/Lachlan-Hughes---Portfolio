@@ -1,43 +1,41 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+const currentPage = localStorage.getItem('currentPage');
 
-function NavTabs({ currentPage, handlePageChange }) {
+function NavTabs() {
   return (
-    <ul className="nav nav-pills ml-auto">
+    <ul className="nav ml-auto">
       <li className="nav-item">
-        <a
-          href="#about"
-          onClick={() => handlePageChange('About')}
+        <Link
+          to="/about"
           className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
         >
           About
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
-          href="#portfolio"
-          onClick={() => handlePageChange('Portfolio')}
+        <Link
+          to="/portfolio"
           className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
         >
           Portfolio
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
-          href="#contact"
-          onClick={() => handlePageChange('Contact')}
+        <Link
+          to="/contact"
           className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
         >
           Contact
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
-          href="#resume"
-          onClick={() => handlePageChange('Resume')}
+        <Link
+          to="/resume"
           className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
         >
           Resume
-        </a>
+        </Link>
       </li>
     </ul>
   );

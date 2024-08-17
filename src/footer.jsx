@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import githubIcon from './assets/GitHub.svg';
 import linkedinIcon from './assets/lin.svg';
@@ -11,8 +12,8 @@ const Footer = ({ handlePageChange }) => {
             <a href='https://github.com/CinosMagician' className='footer-button'>
                 <img src={githubIcon} alt='GitHub Button'/>
             </a>
-            <button onClick={() => handlePageChange('Contact')} className="footer-button">
-                <img src={emailIcon} alt="Email Button" />
+            <button className="footer-button">
+              <Link to="/contact"><img src={emailIcon} alt="Email Button" /></Link>
             </button>
             <a href='https://au.linkedin.com/' className='footer-button'>
                 <img src={linkedinIcon} alt='Linkedin Button'/>
