@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import projectImage1 from "../../assets/reciplace logo 750 x 750.png";
 import projectImage2 from "../../assets/DJ-topview.jpg";
 import projectImage3 from "../../assets/readme.png";
-import projectImage4 from "../../assets/blogspace.png";
+import projectImage4 from "../../assets/blogspaced.png";
 import projectImage5 from "../../assets/weather.png";
 import projectImage6 from "../../assets/coding.jpg";
 import projectImage7 from "../../assets/tunnel.png";
@@ -28,8 +28,9 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: "Group Project - ReciPlace",
+      title: "ReciPlace",
       image: projectImage1,
+      desc: "ReciPlace is a combination of recipe searching and nearby places to eat.",
       projectLink: "https://cinosmagician.github.io/group-2-recipe-project/",
       githubLink: "https://github.com/CinosMagician/group-2-recipe-project",
     },
@@ -37,13 +38,15 @@ export default function Portfolio() {
       id: 2,
       title: "Requests DJ v2",
       image: projectImage2,
+      desc: "Requests DJ Version 2 is a platform that allows DJs and event organizers to create interactive playlists for their events.",
       projectLink: "https://requests.dj/",
       githubLink: "https://github.com/roughnut/requests-dj-v2",
     },
     {
       id: 3,
-      title: "PWA Text Editor",
+      title: "J.A.T.E: Just Another Text Editor",
       image: projectImage7,
+      desc: "JATE is a PWA Text Editor that allows you to type out notes or code on the fly, you can even install it for offline use and save notes to memory.",
       projectLink: "https://codexium-pwa-text-editor.onrender.com/",
       githubLink: "https://github.com/CinosMagician/Codexium-PWA-Text-Editor",
     },
@@ -51,6 +54,7 @@ export default function Portfolio() {
       id: 4,
       title: "BlogSpace",
       image: projectImage4,
+      desc: "Blogs in Space!",
       projectLink: "https://blog-db-rofh.onrender.com/",
       githubLink: "https://github.com/CinosMagician/BlogSpace",
     },
@@ -58,6 +62,7 @@ export default function Portfolio() {
       id: 5,
       title: "Weather Dashboard",
       image: projectImage5,
+      desc: "Search up a city, suburb or a town and find out the weather forecasts",
       projectLink: "https://cinosmagician.github.io/weather-dashboard/",
       githubLink: "https://github.com/CinosMagician/weather-dashboard?tab=readme-ov-file",
     },
@@ -65,6 +70,7 @@ export default function Portfolio() {
       id: 6,
       title: "Taskboard",
       image: projectImage6,
+      desc: "Plan out your tasks, sort them into planned, ongoing or done when completed. Task change to yellow when near the due date and red when overdue.",
       projectLink: "https://cinosmagician.github.io/taskboard/",
       githubLink: "https://github.com/CinosMagician/taskboard",
     },
@@ -72,6 +78,7 @@ export default function Portfolio() {
       id: 7,
       title: "README.md Generator",
       image: projectImage3,
+      desc: "A program designed to help generate a README.MD file for any github project.",
       projectLink: "https://github.com/CinosMagician/README-generator",
       githubLink: "https://github.com/CinosMagician/README-generator",
     }
@@ -89,15 +96,17 @@ export default function Portfolio() {
         {projects.map((project) => (
           <motion.div
             key={project.id}
-            className="project-box"
+            className="project-box project-container"
+            id="a"
             onClick={() => window.open(project.projectLink, "_blank")}
             style={{ backgroundImage: `url(${project.image})` }}
             variants={itemVariants}
             whileHover={{ scale: 1.05 }} // Scale up on hover
             transition={{ duration: 0.1, ease: "easeOut" }} // Smooth scaling effect
           >
+            <div className="project-title project-hover-target">{project.title}</div>
             <div className="project-overlay">
-              <h2 className="portfolioText">{project.title}</h2>
+              <h2 className="portfolioText">{project.desc}</h2>
               <a
                 href={project.githubLink}
                 onClick={(e) => e.stopPropagation()}
