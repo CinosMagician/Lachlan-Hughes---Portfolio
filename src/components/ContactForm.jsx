@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -35,16 +36,15 @@ const ContactForm = () => {
 
     setErrors({ email: '' });
 
-    // Send email using EmailJS
     emailjs.send(
-    'service_ibi5d5q',
-    'template_ry1fhrv',
-    {
-      from_name: formData.name,
-      from_email: formData.email,
-      message: formData.message,
-    },
-    '72iuHhNaIaZI3AnTa'
+      'service_ibi5d5q',
+      'template_ry1fhrv',
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      '72iuHhNaIaZI3AnTa'
     )
     .then((response) => {
       console.log('SUCCESS!', response.status, response.text);
@@ -54,14 +54,24 @@ const ContactForm = () => {
       alert('Failed to send email. Please try again later.');
     });
 
-    // Reset form
     setFormData({ name: '', email: '', message: '' });
   };
 
   return (
-    <div className="container mt-5 contact">
-      <h2>Contact Form:</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="container mt-5">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.6 }}
+      >
+        Contact Form:
+      </motion.h2>
+      <motion.form
+        onSubmit={handleSubmit}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.8 }}
+      >
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name:</label>
           <input
@@ -100,7 +110,7 @@ const ContactForm = () => {
           ></textarea>
         </div>
         <button type="submit" className="btn btn-danger mb-5">Send</button>
-      </form>
+      </motion.form>
     </div>
   );
 };

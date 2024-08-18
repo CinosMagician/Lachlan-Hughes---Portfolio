@@ -10,7 +10,6 @@ import projectImage7 from "../../assets/tunnel.png";
 import githubIcon from "../../assets/GitHub.svg";
 
 export default function Portfolio() {
-
   // Variants for the container to stagger the children animations
   const containerVariants = {
     visible: {
@@ -79,8 +78,8 @@ export default function Portfolio() {
   ];
 
   return (
-    <div>
-      <h1 className="portfolioText">Portfolio</h1>
+    <div className="portback">
+      <h1 className="portfolioHeader">Portfolio</h1>
       <motion.div
         className="portfolio"
         initial="hidden"
@@ -94,6 +93,8 @@ export default function Portfolio() {
             onClick={() => window.open(project.projectLink, "_blank")}
             style={{ backgroundImage: `url(${project.image})` }}
             variants={itemVariants}
+            whileHover={{ scale: 1.05 }} // Scale up on hover
+            transition={{ duration: 0.1, ease: "easeOut" }} // Smooth scaling effect
           >
             <div className="project-overlay">
               <h2 className="portfolioText">{project.title}</h2>

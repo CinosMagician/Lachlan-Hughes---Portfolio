@@ -47,9 +47,15 @@
 
 
 .portfolioText {
-    color: rgb(0, 0, 0);
+    color: black;
     text-align: center;
-    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.portfolioHeader {
+  color: white;
+  text-align: center;
+  padding-top: 1rem;
 }
 
 .portfolio {
@@ -58,23 +64,49 @@
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    margin: 1rem 0 3rem;
 }
 
-.resume,
-.resumeForm,
 .contact {
   color: white;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  background-image: url(../assets/codioful-formerly-gradienta-bKESVqfxass-unsplash.jpg);
+  background-size: cover; /* Adjusted size to cover the whole container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Avoid repeating the image */
 }
 
 .resume {
-  background-image: url(../assets/tunnel.png);
-  background-size: 80rem;
-  background-position: right; /* Center the image */
+  color: white;
+  display: flex; /* Added to center content */
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  background-image: url(../assets/wallpapersden.com_programming-coding-language_1920x1080.jpg);
+  background-size: cover; /* Adjusted size to cover the whole container */
+  background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Avoid repeating the image */
   overflow: hidden; /* Ensure content inside does not overflow outside rounded corners */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.resumeForm {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px; /* Adjust as needed */
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6); /* Optional: Add a background for better readability */
+  border-radius: 1rem; /* Optional: Rounded corners */
+}
+
+.resume-header {
+  text-align: center;
+  color: white; /* Ensure the h1 is visible */
 }
 
 .project-box {
@@ -171,5 +203,17 @@
   border: solid;
   border-radius: 2rem;
   margin: 1rem;
-  background-image: "../../assets/profile.jpg";
+}
+
+.portback {
+  background-image: url(../assets/pngtree-d-rendering-of-abstract-purple-coding-background-with-mock-up-and-picture-image_5592043.jpg);
+  background-size: cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Avoid repeating the image */
+}
+
+@media (min-width: 768px) {
+  .about {
+    max-width: 40rem;
+  }
 }

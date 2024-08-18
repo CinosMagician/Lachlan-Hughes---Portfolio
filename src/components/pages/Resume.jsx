@@ -1,77 +1,119 @@
 export default function Resume() {
   return (
     <div className="resume">
-      <h1 className="text-center">Resume</h1>
+      <div className="resume-header">
+        <h1 className="text-center">Resume</h1>
+      </div>
       <div className="resumeForm">
         <h2>Lachlan Hughes</h2>
         <h3>Contact Details:</h3>
         <ul>
           <li>Phone: 0431 946 427</li>
           <li>Email: lachyhughes@bigpond.com</li>
+          <li>LinkedIn: linkedin.com/in/lachlan-hughes - TBA</li>
+          <li>GitHub: github.com/CinosMagician</li>
         </ul>
+        <h3>Summary:</h3>
+        <p>
+          Highly motivated and detail-oriented Full Stack Web Developer with a passion for creating dynamic and responsive web applications. Experienced in both front-end and back-end development with a strong foundation in JavaScript, React, Node.js, and various web technologies. Adept at working in collaborative environments and delivering high-quality code.
+        </p>
         <h3>Key Skills:</h3>
         <ul>
-          <li>Customer Service experience (including problem solving)</li>
-          <li>Sales including upselling</li>
-          <li>Providing product information</li>
-          <li>Strong interpersonal skills</li>
-          <li>Excellent personal presentation</li>
+          <li>Front-End Development: HTML, CSS, JavaScript, React.js, Redux</li>
+          <li>Back-End Development: Node.js, Express.js, RESTful APIs, MongoDB, SQL</li>
+          <li>Version Control: Git, GitHub</li>
+          <li>Responsive Design: Bootstrap, Tailwind CSS</li>
+          <li>Project Management: Agile methodologies, Scrum</li>
         </ul>
         <h3>Education:</h3>
         <ul>
-          <li>EdX IT Bootcamp (ongoing)</li>
-          <li>Diploma of Information and Technology</li>
-          <li>Kings Baptist Grammar School (completion of SACE)</li>
+          <li>Full Stack Web Development Bootcamp - EdX - University of Sydney</li>
+          <li>Diploma of Information Technology - Saibt/Uni SA</li>
+          <li>Kings Baptist Grammar School - Completion of SACE</li>
         </ul>
-        <h3>Experience Summary:</h3>
+        <h3>Projects:</h3>
         <ul>
           <li>
-            Laubman & Pank Optometrists
+            <strong>ReciPlace</strong> - A recipe management application.
+            <ul>
+              <li>Technologies: React, Node.js, MongoDB</li>
+              <li>Features: User authentication, Recipe CRUD operations</li>
+              <li>Link: <a href="https://cinosmagician.github.io/group-2-recipe-project/" target="_blank" rel="noopener noreferrer">View Project</a></li>
+            </ul>
+          </li>
+          <li>
+            <strong>Requests DJ v2</strong> - A music request platform.
+            <ul>
+              <li>Technologies: React, Node.js, Express.js</li>
+              <li>Features: Music requests, User management</li>
+              <li>Link: <a href="https://requests.dj/" target="_blank" rel="noopener noreferrer">View Project</a></li>
+            </ul>
+          </li>
+          <li>
+            <strong>Codexium PWA Text Editor</strong> - A Progressive Web App for text editing.
+            <ul>
+              <li>Technologies: React, PWA, IndexedDB</li>
+              <li>Features: Offline editing, Real-time synchronization</li>
+              <li>Link: <a href="https://codexium-pwa-text-editor.onrender.com/" target="_blank" rel="noopener noreferrer">View Project</a></li>
+            </ul>
+          </li>
+          <li>
+            <strong>BlogSpace</strong> - A blog platform.
+            <ul>
+              <li>Technologies: Node.js, Express.js, MongoDB</li>
+              <li>Features: Blog creation, Commenting, User profiles</li>
+              <li>Link: <a href="https://blog-db-rofh.onrender.com/" target="_blank" rel="noopener noreferrer">View Project</a></li>
+            </ul>
+          </li>
+          <li>
+            <strong>Weather Dashboard</strong> - A weather forecasting tool.
+            <ul>
+              <li>Technologies: HTML, CSS, JavaScript, OpenWeatherMap API</li>
+              <li>Features: Weather search, Current and forecasted weather</li>
+              <li>Link: <a href="https://cinosmagician.github.io/weather-dashboard/" target="_blank" rel="noopener noreferrer">View Project</a></li>
+            </ul>
+          </li>
+        </ul>
+        <h3>Experience:</h3>
+        <ul>
+          <li>
+            <strong>Laubman & Pank Optometrists</strong>
             <ul>
               <li>Associate Dispenser</li>
               <li>Dec 2021 - Present</li>
+              <li>Enhanced customer service skills and problem-solving abilities.</li>
             </ul>
           </li>
           <li>
-            NewsCorp
+            <strong>NewsCorp</strong>
             <ul>
               <li>Customer Service Officer</li>
-              <li>Dec 2020 – August 2021 (contract)</li>
-              <li>
-                Offering quality customer service to customers with newspaper
-                subscriptions all over Australia
-              </li>
+              <li>Dec 2020 – Aug 2021 (Contract)</li>
+              <li>Provided quality customer service for newspaper subscriptions across Australia.</li>
             </ul>
           </li>
           <li>
-            Datacom Modbury
+            <strong>Datacom Modbury</strong>
             <ul>
               <li>Customer Service Officer</li>
               <li>Feb 2019 – Nov 2019</li>
-              <li>Contracted for the Department of Human Services</li>
-              <li>Left to commence Bachelor of Information Technology</li>
+              <li>Contracted for the Department of Human Services. Left to pursue more knowledge in Information Technology.</li>
             </ul>
           </li>
           <li>
-            Agostino Mitsubishi
+            <strong>Agostino Mitsubishi</strong>
             <ul>
               <li>Car Detailer/Cleaner</li>
               <li>Sept 2016 – Jan 2017</li>
-              <li>Car detailing and cleaning</li>
-              <li>Left to commence Diploma of IT - University of SA (SAIBT)</li>
+              <li>Performed car detailing and cleaning. Left to pursue a Diploma of IT.</li>
             </ul>
           </li>
           <li>
-            On the Run – Convenience Store and Petrol Station
+            <strong>On the Run – Convenience Store and Petrol Station</strong>
             <ul>
               <li>Customer Service Attendant</li>
               <li>Apr 2016 – Jun 2016</li>
-              <li>Night Shift 10pm – 6am</li>
-              <li>Fuel Console Operator</li>
-              <li>Convenience Store Retail Assistant</li>
-              <li>C Coffee Barista</li>
-              <li>X-Lotto Sales</li>
-              <li>General Cleaning Duties</li>
+              <li>Handled various duties including fuel console operation, retail assistance, and barista tasks.</li>
             </ul>
           </li>
         </ul>
