@@ -12,12 +12,12 @@ export default function About() {
       animate(
         scope.current,
         {
-          x: [-1000, 100, 0],
+          opacity: [0, 0.4, 0.8, 1]
         },
         {
           duration: 2,
           ease: "easeInOut",
-          times: [0, 0.2, 0.5, 0.8, 1],
+          times: [0, 0.2, 0.5, 1],
         }
       ).then(() => {
         // Second animation: Profile image grows and pops, starting from hidden
