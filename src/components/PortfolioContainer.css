@@ -23,8 +23,7 @@
 
 .about-box {
   display: flex;
-  /* justify-content: center; */
-  margin-left: 2rem;
+  justify-content: center;
   align-items: center;
   height: 100vh; /* Ensure the .about-box takes up the full viewport height */
   background-image: url(../assets/coding.jpg);
@@ -42,6 +41,8 @@
   justify-content: center;
   align-items: center;
   text-align: center; /* Center-align text within .about */
+  background-color: #414141;
+  border-radius: 2rem;
 }
 
 
@@ -130,12 +131,12 @@
     top: 20px;
   }
 
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .about-box, .resume {
-      background-image: none; /* Remove background image on small screens */
-      background-color: #000; /* Optional: Set a solid color background */
+      background-image: none; 
+      background-color: #000;
     }
-  }
+  } */
   
   @media (max-width: 670px) {
 
@@ -170,4 +171,5 @@
   border: solid;
   border-radius: 2rem;
   margin: 1rem;
+  background-image: "../../assets/profile.jpg";
 }

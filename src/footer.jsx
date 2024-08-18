@@ -19,7 +19,7 @@ const Footer = ({ handlePageChange }) => {
                 <img src={linkedinIcon} alt='Linkedin Button'/>
             </a>
         </div>
-      <p>&copy; 2024 CinosMagician.</p>
+      <p>&copy; 2024 Lachlan Hughes.</p>
     </footer>
   );
 };

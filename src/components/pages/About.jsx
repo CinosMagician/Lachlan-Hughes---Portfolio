@@ -1,24 +1,55 @@
-// import profilePic from '../../assets/profilepic.png';
-// import backgroundImage from '../../assets/istockphoto-1386341272-612x612.jpg'
+import { useAnimate } from "framer-motion";
+import { useEffect } from "react";
+
+import profileImage from '../../assets/newProfile.png';
 
 export default function About() {
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+    if (scope.current) {
+      // First animation: Move the "about" div
+      animate(
+        scope.current,
+        {
+          x: [-1000, 100, 0],
+        },
+        {
+          duration: 2,
+          ease: "easeInOut",
+          times: [0, 0.2, 0.5, 0.8, 1],
+        }
+      ).then(() => {
+        // Second animation: Profile image grows and pops, starting from hidden
+        animate(
+          ".profileImage",
+          {
+            opacity: [0, 1], // Start hidden, then become visible
+            scale: [0, 1.2, 1], // Start from 0, grow beyond 1, then settle at 1
+          },
+          {
+            duration: 0.6, // Duration of the pop animation
+            ease: "easeOut",
+          }
+        );
+      });
+    }
+  }, [scope, animate]);
+
   return (
     <div className="about-box">
-      <div className='about'>
-        <img className="profileImage" alt="Profile Image"></img>
+      <div className="about" ref={scope}>
+        <img className="profileImage" src={profileImage} alt="Profile Image" style={{ opacity: 0 }} /> {/* Start hidden */}
         <h1 className="text-center">About Me</h1>
         <p>
-          My name is Lachlan, a 26 year old male who is currently
-          studying to become a software engineer. I am currently undertaking
-          a bootcamp to help not only refreshen my skills, but to gain more
-          knowledge about the field and help build up a portfolio.
+          My name is Lachlan, an upcoming and aspiring software engineer who has
+          a passion for learning and expanding my skills within web and backend
+          development.
         </p>
         <p>
-          More about me on a personal note. I have been with my lovely girlfriend
-          for just over a year and a half now. I enjoy playing video games,
-          with friends is best but also enjoy some single player games here and there.
-          I really love anime and have been watching since back in 2010. I am currently
-          living at home with my parents, brother and sister, along with our 2 cats.
+          Having spent the majority of my life in front of a computer, and with
+          the drive to always become better, I know that becoming a part of the
+          programming world was something I have always wanted to do.
         </p>
       </div>
     </div>
