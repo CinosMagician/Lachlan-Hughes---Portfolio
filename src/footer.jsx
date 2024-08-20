@@ -15,7 +15,7 @@ const Footer = ({ handlePageChange }) => {
             <button className="footer-button">
               <Link to="/contact"><img src={emailIcon} alt="Email Button" /></Link>
             </button>
-            <a href='https://au.linkedin.com/' className='footer-button'>
+            <a href='https://www.linkedin.com/in/lachlan-hughes-357180324' className='footer-button'>
                 <img src={linkedinIcon} alt='Linkedin Button'/>
             </a>
         </div>
