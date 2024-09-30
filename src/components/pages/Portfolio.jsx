@@ -7,6 +7,7 @@ import projectImage4 from "../../assets/blogspaced.png";
 import projectImage5 from "../../assets/weather.png";
 import projectImage6 from "../../assets/coding.jpg";
 import projectImage7 from "../../assets/tunnel.png";
+import projectImage8 from "../../assets/etgca.png";
 import githubIcon from "../../assets/GitHub.svg";
 
 export default function Portfolio() {
@@ -28,6 +29,14 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
+      title: "Elements the Game Companion App",
+      image: projectImage8,
+      desc: "A full companion app to allow any player to experience the flash game Elements as a physical tabletop card game.",
+      projectLink: "https://elements-companion-app.onrender.com/",
+      githubLink: "https://github.com/CinosMagician/Elements-Companion-App",
+    },
+    {
+      id: 3,
       title: "ReciPlace",
       image: projectImage1,
       desc: "ReciPlace is a combination of recipe searching and nearby places to eat.",
@@ -43,7 +52,7 @@ export default function Portfolio() {
       githubLink: "https://github.com/roughnut/requests-dj-v2",
     },
     {
-      id: 3,
+      id: 4,
       title: "J.A.T.E: Just Another Text Editor",
       image: projectImage7,
       desc: "JATE is a PWA Text Editor that allows you to type out notes or code on the fly, you can even install it for offline use and save notes to memory.",
@@ -51,7 +60,7 @@ export default function Portfolio() {
       githubLink: "https://github.com/CinosMagician/Codexium-PWA-Text-Editor",
     },
     {
-      id: 4,
+      id: 5,
       title: "BlogSpace",
       image: projectImage4,
       desc: "Blogs in Space!",
@@ -59,7 +68,7 @@ export default function Portfolio() {
       githubLink: "https://github.com/CinosMagician/BlogSpace",
     },
     {
-      id: 5,
+      id: 6,
       title: "Weather Dashboard",
       image: projectImage5,
       desc: "Search up a city, suburb or a town and find out the weather forecasts",
@@ -67,7 +76,7 @@ export default function Portfolio() {
       githubLink: "https://github.com/CinosMagician/weather-dashboard?tab=readme-ov-file",
     },
     {
-      id: 6,
+      id: 7,
       title: "Taskboard",
       image: projectImage6,
       desc: "Plan out your tasks, sort them into planned, ongoing or done when completed. Task change to yellow when near the due date and red when overdue.",
@@ -75,7 +84,7 @@ export default function Portfolio() {
       githubLink: "https://github.com/CinosMagician/taskboard",
     },
     {
-      id: 7,
+      id: 8,
       title: "README.md Generator",
       image: projectImage3,
       desc: "A program designed to help generate a README.MD file for any github project.",
