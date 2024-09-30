@@ -1,7 +1,9 @@
+import resume from "../../assets/resume.png";
+
 export default function Resume() {
   return (
     <div className="resume">
-      <img src="../src/assets/resume.png"></img>
+      <img src={resume} alt="Resume" />
     </div>
     // <div className="resume">
     //   <div className="resume-header">
