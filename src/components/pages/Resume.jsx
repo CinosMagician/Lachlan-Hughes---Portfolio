@@ -1,7 +1,7 @@
 export default function Resume() {
   return (
     <div className="resume">
-      <img src="./src/assets/resume.png"></img>
+      <img src="../src/assets/resume.png"></img>
     </div>
     // <div className="resume">
     //   <div className="resume-header">
