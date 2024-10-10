@@ -1,0 +1,97 @@
+.textBox {
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+    margin: 20px;
+}
+
+.hello, .info, .personal {
+    background-color: #444; /* Grey background for each text box */
+    color: #fff; /* White text */
+    padding: 20px; /* Add padding inside the box */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    margin-bottom: 15px; /* Space between text boxes */
+}
+
+.info{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.imageBox {
+    display: flex; /* Ensure image is a flex container */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    max-width: 45%; /* Bigger image area */
+    margin-right: 20px; /* Small gap on the right */
+}
+
+.profileImage {
+    width: 100%; /* Image takes full width of parent */
+    max-width: 400px; /* Limit the max width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optionally round image corners */
+}
+
+.spacerBox {
+    width: 5%; /* Small gap between text and image */
+}
+
+.pageBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Ensure space between text and image */
+    align-items: center; /* Vertically center */
+    width: 90%; /* Adjust width to fit the page properly */
+    max-width: 1200px; /* Limit max width */
+    margin: 0 auto; /* Center horizontally */
+    padding-top: 100px; /* Adjust margin to center vertically */
+}
+
+.backgroundImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    /* background-image: url(../../assets/coding.jpg); */
+    background-size: cover;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 840px) {
+    .pageBox {
+        flex-direction: column; /* Stack text and image vertically */
+        padding-top: 50px; /* Adjust padding for smaller screens */
+    }
+
+    .textBox, .imageBox {
+        max-width: 100%; /* Full width for both text and image */
+    }
+
+    .spacerBox {
+        display: none; /* Hide spacer on smaller screens */
+    }
+
+    .profileImage {
+        max-width: 300px; /* Smaller image on mobile */
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #fff; /* Start color */
+    }
+    50% {
+        color: #14dee9; /* Mid color */
+    }
+    100% {
+        color: #fff; /* End color */
+    }
+}
+
+.textColorAnimation {
+    animation: colorChange 2s infinite alternate; /* 2 seconds duration, infinite */
+}

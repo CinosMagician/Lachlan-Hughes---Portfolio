@@ -10,6 +10,8 @@ import projectImage7 from "../../assets/tunnel.png";
 import projectImage8 from "../../assets/etgca.png";
 import githubIcon from "../../assets/GitHub.svg";
 
+import "./Portfolio.css";
+
 export default function Portfolio() {
   // Variants for the container to stagger the children animations
   const containerVariants = {
@@ -36,20 +38,20 @@ export default function Portfolio() {
       githubLink: "https://github.com/CinosMagician/Elements-Companion-App",
     },
     {
-      id: 3,
-      title: "ReciPlace",
-      image: projectImage1,
-      desc: "ReciPlace is a combination of recipe searching and nearby places to eat.",
-      projectLink: "https://cinosmagician.github.io/group-2-recipe-project/",
-      githubLink: "https://github.com/CinosMagician/group-2-recipe-project",
-    },
-    {
       id: 2,
       title: "Requests DJ v2",
       image: projectImage2,
       desc: "Requests DJ Version 2 is a platform that allows DJs and event organizers to create interactive playlists for their events.",
       projectLink: "https://requests.dj/",
       githubLink: "https://github.com/roughnut/requests-dj-v2",
+    },
+    {
+      id: 3,
+      title: "ReciPlace",
+      image: projectImage1,
+      desc: "ReciPlace is a combination of recipe searching and nearby places to eat.",
+      projectLink: "https://cinosmagician.github.io/group-2-recipe-project/",
+      githubLink: "https://github.com/CinosMagician/group-2-recipe-project",
     },
     {
       id: 4,
@@ -97,35 +99,45 @@ export default function Portfolio() {
     <div className="portback">
       <h1 className="portfolioHeader">Portfolio</h1>
       <motion.div
-        className="portfolio"
+        className="portfolio-grid"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
-        {projects.map((project) => (
-          <motion.div
-            key={project.id}
-            className="project-box project-container"
-            id="a"
-            onClick={() => window.open(project.projectLink, "_blank")}
-            style={{ backgroundImage: `url(${project.image})` }}
-            variants={itemVariants}
-            whileHover={{ scale: 1.05 }} // Scale up on hover
-            transition={{ duration: 0.1, ease: "easeOut" }} // Smooth scaling effect
-          >
-            <div className="project-title project-hover-target">{project.title}</div>
-            <div className="project-overlay">
-              <h2 className="portfolioText">{project.desc}</h2>
+        {projects.map((project, index) => (
+          <React.Fragment key={project.id}>
+            {/* Project image with title block */}
+            <motion.div
+              className="project-image-box single-img"
+              style={{ backgroundImage: `url(${project.image})` }}
+              variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.1, ease: "easeOut" }}
+              onClick={() => window.open(project.projectLink, "_blank")}
+            >
+              <div className="project-title">{project.title}</div>
+            </motion.div>
+
+            {/* Description block with GitHub link */}
+            <motion.div
+              className="project-desc-box"
+              variants={itemVariants}
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.1, ease: "easeOut" }}
+            >
+              <h2>{project.title}</h2>
+              <p>{project.desc}</p>
               <a
                 href={project.githubLink}
-                onClick={(e) => e.stopPropagation()}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="github-link"
               >
                 <img className="gitlogo" src={githubIcon} alt="GitHub" />
+                View on GitHub
               </a>
-            </div>
-          </motion.div>
+            </motion.div>
+          </React.Fragment>
         ))}
       </motion.div>
     </div>

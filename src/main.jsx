@@ -2,10 +2,12 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider, useLocation, Outlet } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import App from './App';
+import ScrollToTop from './components/tools/ScrollToTop';
 import Portfolio from './components/pages/Portfolio';
 import Contact from './components/pages/Contact';
 import About from './components/pages/About';
 import Resume from './components/pages/Resume';
+import Work from './components/pages/Work';
 import './fade.css';
 
 function AnimatedRoutes() {
@@ -32,7 +34,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <AnimatedRoutes />,
+        element: (
+        <>
+          <ScrollToTop />
+          <AnimatedRoutes />
+        </>
+        ),
         children: [
           {
             index: true,
@@ -42,10 +49,10 @@ const router = createBrowserRouter([
             path: 'about',
             element: <About />,
           },
-          {
-            path: 'portfolio',
-            element: <Portfolio />,
-          },
+          // {
+          //   path: 'portfolio',
+          //   element: <Portfolio />,
+          // },
           {
             path: 'contact',
             element: <Contact />,
@@ -54,6 +61,10 @@ const router = createBrowserRouter([
             path: 'resume',
             element: <Resume />,
           },
+          {
+            path: 'projects',
+            element: <Work />,
+          }
         ],
       },
     ],

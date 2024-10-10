@@ -1,9 +1,11 @@
 html, body, :root {
   height: 100%;
-  background-color: #000000;
-  /* background-image: url('../src/assets/blueexpback.png'); */
-  background-repeat: no-repeat;
-  background-position: center;
+  /* background-color: #184153; */
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(24, 65, 83));
+    /* background-image: url(../src/assets/codioful-formerly-gradienta-bKESVqfxass-unsplash.jpg);
+    background-size: auto;
+    background-position: auto;
+    background-repeat: repeat; */
   font-family: "Varela Round", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -16,6 +18,6 @@ main {
   background-color: transparent;
 }
 
-.active, .nav-link:focus{
+.active, .nav-link:focus, .nav-link:hover{
   color: white;
 }

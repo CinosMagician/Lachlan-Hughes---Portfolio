@@ -2,7 +2,7 @@ import resume from "../../assets/resume.png";
 
 export default function Resume() {
   return (
-    <div className="resume">
+    <div className="resume topGap">
       <img src={resume} alt="Resume" />
     </div>
     // <div className="resume">
