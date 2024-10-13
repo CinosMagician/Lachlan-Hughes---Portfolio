@@ -21,8 +21,6 @@
 
 .info{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    align-items: center;
-    justify-content: center;
 }
 
 .imageBox {
@@ -59,12 +57,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
+    height: 100vh;
     width: 100%;
-    /* background-image: url(../../assets/coding.jpg); */
+    background-image: url(../../assets/astro.jpg);
     background-size: cover;
     background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Avoid repeating the image */
+    background-repeat: repeat; /* Avoid repeating the image */
 }
 
 /* Media query for responsiveness */
@@ -192,4 +190,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 850px) {
+    .backgroundImage {
+        height: auto;
+    }
 }

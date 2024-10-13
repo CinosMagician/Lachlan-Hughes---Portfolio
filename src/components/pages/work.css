@@ -35,7 +35,8 @@
             @media (max-width: 479px) {
             }
             h2 {
-                margin: 0 .5rem;
+                /* margin-top: 5rem; */
+                margin: 5rem 0.5rem 0rem;
                 font-size: 4rem;
                 padding: 0;
                 color: white;

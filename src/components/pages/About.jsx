@@ -53,7 +53,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="textColorAnimation"
             >
-              Hi there! ✌️ My name is Lachlan
+              Hi there! My name is Lachlan ✌️
             </motion.h3>
           </div>
           <div className="info">
