@@ -1,9 +1,10 @@
 import resume from "../../assets/resume.png";
+import "./Resume.css";
 
 export default function Resume() {
   return (
     <div className="resume topGap">
-      <img src={resume} alt="Resume" />
+      <img className="resumeImg" src={resume} alt="Resume" />
     </div>
     // <div className="resume">
     //   <div className="resume-header">

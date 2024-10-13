@@ -157,9 +157,9 @@ body {
   background-color: #204E7B;
 }
 
-.nav li:first-child > a {
+/* .nav li:first-child > a {
   border-bottom: 1px solid #FFD447;
-}
+} */
 
 .nav-link.active {
   font-weight: bold;
@@ -204,6 +204,7 @@ body {
 
 .dropdown-menu .nav-item {
   margin: 0;
+  list-style-type: none;
 }
 
 .dropdown-menu .nav-link {

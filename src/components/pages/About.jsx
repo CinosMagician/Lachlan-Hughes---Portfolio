@@ -1,5 +1,13 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
+import ReactImg from '../../assets/react.png'
+import HtmlImg from '../../assets/html.png'
+import CssImg from '../../assets/css.png'
+import JsImg from '../../assets/javascript.png'
+import NodeImg from '../../assets/node.png'
+import MongoImg from '../../assets/mongo.png'
+import PostgresqlImg from '../../assets/postgresql.png'
+import ExpressImg from '../../assets/express.png'
 import "./About.css";
 import profileImage from '../../assets/newProfile.png';
 
@@ -26,7 +34,7 @@ export default function About() {
         animate={{ opacity: 1, y: 0 }} // Animate to original position
         transition={{
           duration: 0.5,
-          delay: index * 0.04 // Stagger the animation
+          delay: index * 0.03 // Stagger the animation
         }}
       >
         {letter}
@@ -54,14 +62,14 @@ export default function About() {
               animate={{ opacity: 1, color: "#f0f0f0" }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              I'm an upcoming and aspiring software engineer with a passion for learning and expanding my skills in web and backend development.
+              An upcoming and aspiring software engineer with a passion for expanding my web skills.
             </motion.h1>
           </div>
           <div className="personal">
             <motion.p
               initial={{ opacity: 0, color: "#fff" }}
               animate={{ opacity: 1, color: "#f0f0f0" }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              transition={{ duration: 0, delay: 0 }}
             >
               {createWave("Having spent the majority of my life in front of a computer, and with the drive to always become better, I know that becoming a part of the programming world was something I have always wanted to do.")}
             </motion.p>
@@ -70,11 +78,13 @@ export default function About() {
 
         <div className="spacerBox"></div>
 
+
+        <div className="secondHalf">
         <motion.div
           className="imageBox"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: [0, 1.2, 1] }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 2 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
         >
           <div className="image">
             <img
@@ -84,6 +94,79 @@ export default function About() {
             />
           </div>
         </motion.div>
+        <div className="tooling">
+            <div className="tooling-title">
+              <h2>Skillset</h2>
+            </div>
+            
+            <div className="tooling-box">
+            <div className="box-content">
+                <div className="box-icon">
+                <img className="icon" src={MongoImg}/>
+                </div>
+                <div className="box-text">
+                  <p>MongoDB</p>
+                </div>
+              </div>
+              <div className="box-content">
+                <div className="box-icon">
+                <img className="icon" src={ExpressImg}/>
+                </div>
+                <div className="box-text">
+                  <p>Express Js</p>
+                </div>
+              </div>
+              <div className="box-content">
+                <div className="box-icon">
+                <img className="icon" src={ReactImg}/>
+                </div>
+                <div className="box-text">
+                  <p>React</p>
+                </div>
+              </div>
+              <div className="box-content">
+                <div className="box-icon">
+                <img className="icon" src={NodeImg}/>
+                </div>
+                <div className="box-text">
+                  <p>Node</p>
+                </div>
+              </div>
+              <div className="box-content">
+                <div className="box-icon">
+                <img className="icon" src={PostgresqlImg}/>
+                </div>
+                <div className="box-text">
+                  <p>PostgreSQL</p>
+                </div>
+              </div>
+              <div className="box-content">
+                <div className="box-icon">
+                  <img className="icon" src={HtmlImg}/>
+                </div>
+                <div className="box-text">
+                  <p>HTML</p>
+                </div>
+              </div>
+              <div className="box-content">
+                <div className="box-icon">
+                <img className="icon" src={JsImg}/>
+                </div>
+                <div className="box-text">
+                  <p>Javascript</p>
+                </div>
+              </div>
+              <div className="box-content">
+                <div className="box-icon">
+                <img className="icon" src={CssImg}/>
+                </div>
+                <div className="box-text">
+                  <p>CSS</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@
 }
 
 .topGap {
-    margin-top: 4rem !important;
+    margin-top: 5rem !important;
 }
 
 /* .bg-purp {
@@ -102,7 +102,7 @@
   flex-direction: column;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  min-height: 100vh; /* Ensure it takes full viewport height */
+  /* min-height: 100vh; */
   /* background-image: url(../assets/wallpapersden.com_programming-coding-language_1920x1080.jpg); */
   background-size: cover; /* Adjusted size to cover the whole container */
   background-position: center; /* Center the background image */
