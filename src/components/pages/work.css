@@ -261,16 +261,12 @@
                 }
                 .button-wrap {
                     height: max-content;
-                    display: flex;
+                    /* display: flex; */
                     align-items: center;
                     justify-content: center;
                     @media (min-width: 1025px) and (max-width: 1300px){
                     }
                     @media (min-width: 760px) and (max-width: 1024px) {
-                    }
-                    @media (min-width: 480px) and (max-width: 759px) {
-                    }
-                    @media (max-width: 479px) {
                     }
                     button {
                         padding: .5rem .9rem;
@@ -412,3 +408,8 @@
     width: 30px;
 }
 
+@media (max-width: 500px) {
+    .work-header {
+        padding-left: 0rem !important;
+    }
+}

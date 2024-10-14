@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import ContactForm from "../ContactForm";
+import "./Contact.css";
 
 export default function Contact() {
   return (
@@ -13,7 +14,7 @@ export default function Contact() {
         Want to hire me?
       </motion.h1>
       <motion.p
-        className="text-center"
+        className="text-center mediaP"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 2, delay: 0.4 }}
