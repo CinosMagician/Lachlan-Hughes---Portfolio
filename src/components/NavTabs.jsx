@@ -19,16 +19,19 @@ const NavTabs = () => {
       opacity: 1,
       y: 0,
       transition: {
+        type: "spring", // Spring animation for a more natural motion
+        stiffness: 260, // Adjust for snappiness
+        damping: 20, // Control the bounce
         duration: 0.3,
-        ease: "easeInOut",
+        ease: "easeOut", // Smoother easing curve
       },
     },
     closed: {
       opacity: 0,
       y: -20,
       transition: {
-        duration: 0.3,
-        ease: "easeInOut",
+        duration: 0.2, // Quicker exit for responsiveness
+        ease: "easeIn",
       },
     },
   };

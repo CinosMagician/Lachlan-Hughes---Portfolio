@@ -181,6 +181,7 @@ body {
 }
 
 .dropdown-menu {
+  will-change: transform, opacity; /* Tell the browser these will change */
   position: absolute;
   top: 50px;
   right: 0;
@@ -231,5 +232,6 @@ body {
 
   .dropdown-menu {
     display: block;
+    will-change: transform, opacity; /* Hint for smooth animations */
   }
 }
