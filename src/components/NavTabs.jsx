@@ -13,28 +13,30 @@ const NavTabs = () => {
     setIsMenuOpen(prevState => !prevState);
   };
 
-  // Define animation variants
+  const isMobile = window.innerWidth <= 840;
+
   const navVariants = {
     open: {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring", // Spring animation for a more natural motion
-        stiffness: 260, // Adjust for snappiness
-        damping: 20, // Control the bounce
-        duration: 0.3,
-        ease: "easeOut", // Smoother easing curve
+        type: "spring",
+        stiffness: isMobile ? 220 : 260, // Less stiffness on mobile
+        damping: 20,
+        duration: isMobile ? 0.2 : 0.3, // Shorter duration for mobile
+        ease: "easeOut",
       },
     },
     closed: {
       opacity: 0,
       y: -20,
       transition: {
-        duration: 0.2, // Quicker exit for responsiveness
+        duration: isMobile ? 0.15 : 0.2, // Shorter exit on mobile
         ease: "easeIn",
       },
     },
   };
+  
 
   // Function to check if the current route matches the given path
   const isActive = (path) => location.pathname === path;

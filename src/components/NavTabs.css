@@ -181,7 +181,7 @@ body {
 }
 
 .dropdown-menu {
-  will-change: transform, opacity; /* Tell the browser these will change */
+  will-change: transform, opacity;
   position: absolute;
   top: 50px;
   right: 0;
@@ -191,12 +191,15 @@ body {
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  backface-visibility: hidden; /* Helps with rendering performance */
+  perspective: 1000px; /* Force better rendering on mobile */
 }
 
 .dropdown-menu.show {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 .dropdown-menu .nav {
   display: flex;
