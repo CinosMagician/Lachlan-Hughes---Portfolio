@@ -51,8 +51,8 @@ const NavTabs = () => {
         <ul className="nav-list">
           <li className="nav-item">
             <Link
-              to="/"
-              className={isActive('/') ? 'nav-link active' : 'nav-link'}
+              to="/about"
+              className={isActive('/about') ? 'nav-link active' : 'nav-link'}
             >
               Home
             </Link>
