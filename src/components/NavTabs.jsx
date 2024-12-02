@@ -39,7 +39,12 @@ const NavTabs = () => {
   
 
   // Function to check if the current route matches the given path
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path) => {
+    if (location.pathname === '/' && path === '/projects') {
+      return true; // Mark "Projects" active when on the home domain
+    }
+    return location.pathname === path;
+  };
 
   return (
     <header className="header">
